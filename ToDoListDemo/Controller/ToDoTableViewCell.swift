@@ -13,11 +13,10 @@ class ToDoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var backGroundView: UIView!
     @IBOutlet weak var newTaskLBL: UILabel!
-    
-    
     @IBOutlet weak var UpButtonOutlet: UIButton!
-    
     @IBOutlet weak var downBttonOutlet: UIButton!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,8 +28,10 @@ class ToDoTableViewCell: UITableViewCell {
 
     }
     
-    // MARK: - IBAction
     
-
+    
+    
+    
+    
     
 }

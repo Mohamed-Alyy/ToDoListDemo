@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Viw Controller-->
+        <!--Do ti-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViwController" customModule="ToDoListDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ToDoViwController" customModule="ToDoListDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="103" id="K6S-PY-1QQ" customClass="ToDoTableViewCell" customModule="ToDoListDemo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="toDoCell" rowHeight="103" id="K6S-PY-1QQ" customClass="ToDoTableViewCell" customModule="ToDoListDemo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K6S-PY-1QQ" id="5bt-VE-g7L">
@@ -37,7 +37,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="SOw-ub-tCh">
-                                                            <rect key="frame" x="312" y="21" width="45" height="61"/>
+                                                            <rect key="frame" x="359" y="21" width="45" height="61"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGC-01-kI3">
                                                                     <rect key="frame" x="0.0" y="0.0" width="45" height="26"/>
@@ -50,10 +50,9 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.66193616390228271" green="0.92766344547271729" blue="0.69290608167648315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="ID8-mF-e10" firstAttribute="leading" secondItem="vPh-0J-Ajq" secondAttribute="leading" constant="20" id="2bI-8C-nIe"/>
-                                                        <constraint firstAttribute="trailing" secondItem="SOw-ub-tCh" secondAttribute="trailing" constant="57" id="88F-Km-Hhf"/>
+                                                        <constraint firstAttribute="trailing" secondItem="SOw-ub-tCh" secondAttribute="trailing" constant="10" id="88F-Km-Hhf"/>
                                                         <constraint firstItem="ID8-mF-e10" firstAttribute="centerY" secondItem="vPh-0J-Ajq" secondAttribute="centerY" id="QqI-bj-6Je"/>
                                                         <constraint firstItem="SOw-ub-tCh" firstAttribute="width" secondItem="vPh-0J-Ajq" secondAttribute="width" multiplier="0.108696" id="WUf-eS-AGu"/>
                                                         <constraint firstItem="SOw-ub-tCh" firstAttribute="height" secondItem="vPh-0J-Ajq" secondAttribute="height" multiplier="0.596639" id="i9I-p3-mRz"/>
@@ -87,7 +86,7 @@
                             <constraint firstItem="Buc-Uz-Eib" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sW7-Xn-mNp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ltD-xx-GyA">
+                    <navigationItem key="navigationItem" title="Do ti" id="ltD-xx-GyA">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="pencil" catalog="system" id="WDI-ep-4Az">
                             <connections>
                                 <action selector="editBttonPressed:" destination="BYZ-38-t0r" id="WQ4-aG-gzo"/>
@@ -108,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="853.62318840579712" y="89.732142857142847"/>
         </scene>
-        <!--New Task View Controller-->
+        <!--اضافة مهمة جديدة-->
         <scene sceneID="sMO-Ds-Es7">
             <objects>
-                <viewController id="v7a-v0-2S0" customClass="NewTaskViewController" customModule="ToDoListDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewTaskViewController" id="v7a-v0-2S0" customClass="NewTaskViewController" customModule="ToDoListDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XbA-ZX-O8d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,10 +118,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cie-64-Eqr">
                                 <rect key="frame" x="41.5" y="313.5" width="331" height="269"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zda-98-jy7">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="مهمة جديدة" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zda-98-jy7">
                                         <rect key="frame" x="33" y="99" width="265" height="54"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="add new task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gal-fg-d4k">
                                         <rect key="frame" x="105.5" y="30" width="120" height="23"/>
@@ -133,7 +132,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ke-Q0-Dm6">
                                         <rect key="frame" x="73" y="189" width="185" height="42.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="add task"/>
+                                        <connections>
+                                            <action selector="addTaskButnPressed:" destination="v7a-v0-2S0" eventType="touchUpInside" id="cXp-pP-p98"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.66193616390228271" green="0.92766344547271729" blue="0.69290608167648315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -160,29 +162,41 @@
                             <constraint firstItem="cie-64-Eqr" firstAttribute="centerY" secondItem="XbA-ZX-O8d" secondAttribute="centerY" id="W5x-ln-17L"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HvD-do-Oan"/>
+                    <navigationItem key="navigationItem" title="اضافة مهمة جديدة" largeTitleDisplayMode="always" id="HvD-do-Oan"/>
+                    <connections>
+                        <outlet property="addTaskButnOutlet" destination="6ke-Q0-Dm6" id="5Qg-5x-LRz"/>
+                        <outlet property="backGroundView" destination="cie-64-Eqr" id="rs9-CV-AjB"/>
+                        <outlet property="newTaskTextField" destination="Zda-98-jy7" id="PDw-qc-ycQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdj-7j-tWT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1550.7246376811595" y="74.330357142857139"/>
+            <point key="canvasLocation" x="1599" y="90"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cLV-3U-SRb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TXF-VA-5F3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="TXF-VA-5F3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SCc-lo-xou">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cck-8K-en6">
+                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Eu-k7-951"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JaH-hs-BP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="90.401785714285708"/>
+            <point key="canvasLocation" x="93" y="90"/>
         </scene>
     </scenes>
     <resources>
